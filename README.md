@@ -1,5 +1,5 @@
 # File Encryption/Decryption Application Using AES
-
+![alt text](https://github.com/Youssef-Elos/AES-Encryption-Decryption-GUI/main/v2.png?raw=true)
 ## Description
 This project is a Python-based application that provides AES (Advanced Encryption Standard) encryption and decryption for files. The application offers a user-friendly graphical user interface (GUI) built with Tkinter, enabling users to easily encrypt and decrypt files. The AES algorithm ensures secure encryption, protecting sensitive data with 128-bit keys.
 
