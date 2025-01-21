@@ -1,84 +1,48 @@
-# AES-Encryption-Decryption-GUI
-AES Encryption/Decryption with Key Verification and a GUI
+# File Encryption/Decryption Application Using AES
 
-This project implements AES encryption and decryption with a graphical user interface (GUI) using Python's `tkinter` library. It also includes key verification using a SHA-256 hash to ensure that only the correct key can decrypt the encrypted text.
+## Description
+This project is a Python-based application that provides AES (Advanced Encryption Standard) encryption and decryption for files. The application offers a user-friendly graphical user interface (GUI) built with Tkinter, enabling users to easily encrypt and decrypt files. The AES algorithm ensures secure encryption, protecting sensitive data with 128-bit keys.
 
 ## Features
-
-- AES encryption and decryption
-- Key verification using SHA-256 hash
-- Simple and intuitive GUI
-
-## Requirements
-
-- Python 3.x
-- `tkinter` library (usually included with Python)
-- `hashlib` library (included with Python)
+- **AES File Encryption**: Securely encrypt files using a provided or randomly generated AES key.
+- **AES File Decryption**: Decrypt previously encrypted files using the corresponding AES key.
+- **Key Generation**: Automatically generate a random 16-byte AES key for encryption.
+- **File Handling**: Choose files from the system to encrypt or decrypt through the GUI.
+- **User-Friendly Interface**: A simple and intuitive interface that makes encryption and decryption operations easy to perform.
 
 ## Installation
+To run this application, ensure Python is installed on your system. Clone this repository and install the required packages:
 
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/yourusername/aes-encryption.git
-    cd aes-encryption
-    ```
-
-2. Ensure you have Python 3.x installed. You can download it from [python.org](https://www.python.org/).
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage
+1. Clone the repository:
+```bash
+git clone https://github.com/Ressal0/AES-file-Encryption-Decryption.git
+cd AES-file-Encryption-Decryption
+```
+2. Run the application:
+```bash
+python aes-file-encryption2.0v.py
+```
+3. Use the GUI to:
+   - Select a file for encryption or decryption.
+   - Generate an AES key or use a provided key.
+   - Encrypt the selected file or decrypt it back to its original form.
 
-1. Run the application:
-    ```sh
-    python your_script_name.py
-    ```
+## Files
+- `aes-file-encryption2.0v.py`: Contains the AES encryption and decryption functionality, including key generation. And it Manages the graphical user interface and user interactions.
+- `requirements.txt`: Lists all required dependencies to run the project.
 
-2. The GUI will open. You can enter the text you want to encrypt or decrypt and the key.
+## Dependencies
+- `tkinter`: Used for the graphical interface.
+- `os`: For file and key management.
+- `pycryptodome`: Provides cryptographic functions, including AES (install via `pip install pycryptodome`).
 
-3. Click the "Encrypt" button to encrypt the text or the "Decrypt" button to decrypt the text.
+## Acknowledgements
+This project was developed as part of a cybersecurity assignment focused on encryption and decryption methods using Python.
 
-## Key Verification
-
-The application uses a SHA-256 hash to verify the key. The correct key's hash is stored securely within the application. When a user provides a key, its hash is compared to the stored hash to verify its correctness.
-
-### Example Code Snippet
-
-Here's a snippet showing how key verification is implemented:
-
-```python
-import hashlib
-import tkinter as tk
-from tkinter import messagebox
-
-class YourClass:
-    # Other parts of your class
-
-    def generate_key_hash(self, key):
-        """Generate a SHA-256 hash of the given key."""
-        return hashlib.sha256(key.encode()).hexdigest()
-
-    def verify_key(self, user_key):
-        """Verify the user-provided key against the stored hash."""
-        # Example stored hash of the correct key (you should generate this securely and store it)
-        stored_hash = "your_stored_hash_here"
-        user_key_hash = self.generate_key_hash(user_key)
-        return user_key_hash == stored_hash
-
-    def encrypt(self):
-        text = self.text_entry.get().strip()
-        key = self.key_entry.get().strip()
-
-        if not self.verify_key(key):
-            messagebox.showerror("Error", "Incorrect key")
-            return
-
-        # Your existing encryption logic
-
-    def decrypt(self):
-        text = self.text_entry.get().strip()
-        key = self.key_entry.get().strip()
-
-        if not self.verify_key(key):
-            messagebox.showerror("Error", "Incorrect key")
-            return
-
-        # Your existing decryption logic
+## Contact
+For any questions or suggestions, feel free to contact me at abdellah.ressal@gmail.com
