@@ -45,4 +45,4 @@ python aes-file-encryption2.0v.py
 This project was developed as part of a cybersecurity assignment focused on encryption and decryption methods using Python.
 
 ## Contact
-For any questions or suggestions, feel free to contact me at abdellah.ressal@gmail.com
+For any questions or suggestions, feel free to contact me
